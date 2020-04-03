@@ -1,6 +1,5 @@
 package main
 import (
-	"fmt"
     "github.com/rwynn/monstache/monstachemap"
 )
 // a plugin to convert document values to uppercase
@@ -14,7 +13,6 @@ func Map(input *monstachemap.MapperPluginInput) (output *monstachemap.MapperPlug
 		}
 		doc["tags"] = strTags
     } else {
-		fmt.Printf("record not a map[string]interface{}: %v\n", doc["tags"])
 		doc["tags"] = nil
     }
 
